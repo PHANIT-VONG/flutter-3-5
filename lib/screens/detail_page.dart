@@ -12,7 +12,23 @@ class DetailPage extends StatelessWidget {
         title: Text('${model.title}'),
       ),
       body: Center(
-        child: Image.network(model.image),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 200,
+              width: double.infinity,
+              child: Image.network(model.image),
+            ),
+            Text(
+              '${model.title}',
+              style: TextStyle(
+                fontSize: 30,
+                color: Colors.black,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
